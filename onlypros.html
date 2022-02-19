@@ -309,13 +309,12 @@ footer a, footer a:hover{
     })
         /* For this box, edit only ip. | สำหรับช่องนี้แก้ไขเฉพาะ ip */
     /* example | ตัวอย่าง  edit > (let url = "hypixel.net";) to (let url = "ip address";) */
-    let url = "hypixel.net";
+    let url = "onlyprosSMPnyJz.aternos.me";
     $(document).ready(() => {
       $.getJSON("https://api.mcsrvstat.us/1/" + url, (status) => {
           if (status.debug.ping) {
               $("#motd").append(status.motd.raw);
               $("#status").append("online");
-              $("#version").append(status.version);
               $("#players_num").append(status.players.online + "/" + status.players.max)
               $.each(status.players.list, function (index, player) {
                   $("#players_list").append("<li>" + player + "</li>")
@@ -323,7 +322,6 @@ footer a, footer a:hover{
           } else {
               $("#motd").append(status.hostname);
               $("#status").append("offline");
-              $("#version").hide();
               $("#players_num").hide();
           }
           $("body").fadeIn(2000);
@@ -353,18 +351,16 @@ footer a, footer a:hover{
 <div class="col-sm-12 all">
 
 <div class="icon">
-<img src="https://api.mcsrvstat.us/icon/hypixel.net" alt="errors">
 </div>
 
 <div class="logo">
-<img src="./img/logo.png" alt="errors">
 </div>
 
 <div class="info_and_status">
-<h1><span id="sv_ip">onlyprosSMPnyJz.aternos.me</span><br><span id="status">status: Check Discord</span></h1>
-<h2 id="players_num">Players: 599+ unique players ever joined</h2>
+<h1><span id="sv_ip">onlyprosSMPnyJz.aternos.me</span><br><span id="status">status: </span></h1>
+<h2 id="players_num">Players: (600+ unique players ever joined) </h2>
 <h3 id="version">Version: Any!</h3>
-<a href="#Set-link-ตั้งค่าลิงก์">onlyprosSMPnyJz.aternos.me</a>
+<a href="http://discord.gg/Syf7sZpvCJ">onlyprosSMPnyJz.aternos.me</a>
 </div>
 <hr>
 <p>OnlyPros Servers Have Hypixel/Smp/Pixelmon/etc. servers</p>
